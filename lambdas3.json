@@ -1,0 +1,22 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "A template is for creating lambda from s3 buckets",
+    "Resources": {
+        "LambdaFunResource": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+                "FunctionName": "Lambda",
+                
+                "Code": {
+        "S3Bucket" : "mybuckets3341",
+        "S3Key" : "node-js-sample.zip"
+      },
+                "Description": "Used to run job",
+                "Handler": "index.handler",
+                "Role": "arn:aws:iam::383797601860:role/lambdarole",
+                "Runtime": "nodejs18.x",
+                "Timeout": 120
+            }
+        }
+  }
+}
