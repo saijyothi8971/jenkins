@@ -24,7 +24,12 @@
 			    "EventBusName": "default",
 			    "Name": "test3",
 			    "ScheduleExpression": "rate(12 hours)",
-			    "State": "ENABLED"
+			    "State": "ENABLED",
+                "Targets": [{
+                    "Id": "Ide0ef24fe-372c-4105-a1e2-5f6b0245872a",
+                    "Arn": "arn:aws:lambda:ap-south-1:383797601860:function:Lambda"
+                  }]
+                
 		    }
 	    }
     }
