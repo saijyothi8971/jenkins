@@ -31,6 +31,12 @@
                   }]
                 
 		    }
-	    }
+	    },
+        "Parameters": {
+            "FunctionName": {
+              "Type": "String",
+              "Description": "The FunctionName to use within the container definition"
+            }
+          }
     }
 }
