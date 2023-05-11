@@ -1,11 +1,17 @@
 {
 	"AWSTemplateFormatVersion": "2010-09-09",
 	"Description": "A template is for creating lambda from s3 buckets and EventBridge rule 'test3'",
+    "Parameters": {
+        "FunctionName": {
+          "Type": "String",
+          "Description": "The FunctionName to use within the container definition"
+        }
+    },
 	"Resources": {
 		"LambdaFunResource": {
 			"Type": "AWS::Lambda::Function",
 			"Properties": {
-				"FunctionName": "",
+				"FunctionName": "!RefFunctionName",
 				"Code": {
 					"S3Bucket": "mybuckets3341",
 					"S3Key": "node-js-sample.zip"
@@ -31,12 +37,7 @@
                   }]
                 
 		    }
-	    },
-        "Parameters": {
-            "FunctionName": {
-              "Type": "String",
-              "Description": "The FunctionName to use within the container definition"
-            }
-          }
+	    }
+
     }
 }
