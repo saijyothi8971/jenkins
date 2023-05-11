@@ -1,6 +1,6 @@
 {
 	"AWSTemplateFormatVersion": "2010-09-09",
-	"Description": "A template is for creating lambda from s3 buckets and EventBridge rule 'test3'",
+	"Description": "A template is for creating lambda from s3 buckets and EventBridge rule ",
     "Parameters": {
         "FunctionName": {
           "Type": "String",
@@ -28,12 +28,12 @@
 		    "Type": "AWS::Events::Rule",
 		    "Properties": {
 			    "EventBusName": "default",
-			    "Name": "test3",
+			    "Name": "!RefFunctionName",
 			    "ScheduleExpression": "rate(12 hours)",
 			    "State": "ENABLED",
                 "Targets": [{
                     "Id": "Ide0ef24fe-372c-4105-a1e2-5f6b0245872a",
-                    "Arn": "arn:aws:lambda:ap-south-1:383797601860:function:Lambda"
+                    "Arn": "arn:aws:lambda:ap-south-1:383797601860:function:FunctionName"
                   }]
                 
 		    }
