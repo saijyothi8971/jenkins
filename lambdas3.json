@@ -11,7 +11,7 @@
 		"LambdaFunResource": {
 			"Type": "AWS::Lambda::Function",
 			"Properties": {
-				"FunctionName": "!RefFunctionName",
+				"FunctionName": "!Ref  FunctionName",
 				"Code": {
 					"S3Bucket": "mybuckets3341",
 					"S3Key": "node-js-sample.zip"
@@ -28,12 +28,12 @@
 		    "Type": "AWS::Events::Rule",
 		    "Properties": {
 			    "EventBusName": "default",
-			    "Name": "!RefFunctionName",
+			    "Name": "!Ref FunctionName",
 			    "ScheduleExpression": "rate(12 hours)",
 			    "State": "ENABLED",
                 "Targets": [{
                     "Id": "Ide0ef24fe-372c-4105-a1e2-5f6b0245872a",
-                    "Arn": "arn:aws:lambda:ap-south-1:383797601860:function:FunctionName"
+                    "Arn": "arn:aws:lambda:ap-south-1:383797601860:function:!Ref FunctionName"
                   }]
                 
 		    }
