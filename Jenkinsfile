@@ -1,8 +1,7 @@
 pipeline {
     agent any
     parameters{
-        string(defaultValue: 'NULL', description: 'important', name: 'stack-name', trim: false),
-        string(defaultValue: 'NULL', description: 'important', name: 'ORG_ID', trim: false)
+        string(defaultValue: 'NULL', description: 'important', name: 'stack-name', trim: false)
         }       
     stages {
         stage('Submit Stack') {
