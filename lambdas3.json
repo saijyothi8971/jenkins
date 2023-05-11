@@ -5,7 +5,7 @@
 		"LambdaFunResource": {
 			"Type": "AWS::Lambda::Function",
 			"Properties": {
-				"FunctionName": "Lambda",
+				"FunctionName": "",
 				"Code": {
 					"S3Bucket": "mybuckets3341",
 					"S3Key": "node-js-sample.zip"
